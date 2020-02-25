@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GankConcentration</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="app_tab_today">今日</string>
+    <string name="app_tab_reading">闲读</string>
+    <string name="app_tab_review">回顾</string>
+    <string name="app_tab_profile">我的</string>
+</resources>
