@@ -18,8 +18,8 @@ class TodayGankCategoryItemViewModel() {
     fun updateData(data: GankData) {
         title.value = data.desc
 
-//        time.value = formatTime(data.publishedAt)
-        time.value = data.publishedAt
+        time.value = formatTime(data.publishedAt)
+//        time.value = data.publishedAt
 
         imageUrl.value = if ("福利" == data.type) {
             data.url
