@@ -2,10 +2,10 @@ package cc.bear3.gank.ui.today.category
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
 import cc.bear3.gank.data.GankData
+import cc.bear3.baseadapter.AContentViewHolder
+import cc.bear3.baseadapter.BaseAdapter
 import cc.bear3.gank.databinding.ItemTodayGankBinding
-import cc.bear3.gank.ui.common.BaseAdapter
 
 /**
  * Description:
@@ -13,9 +13,13 @@ import cc.bear3.gank.ui.common.BaseAdapter
  * Since: 2020-02-25
  */
 class TodayGankCategoryAdapter :
-    BaseAdapter<GankData, TodayGankCategoryAdapter.TodayGankViewHolder>() {
+    cc.bear3.baseadapter.BaseAdapter<GankData, TodayGankCategoryAdapter.TodayGankViewHolder>() {
 
-    override fun onCreateCustomViewHolder(parent: ViewGroup, viewType: Int): TodayGankViewHolder {
+    override fun onCreateCustomViewHolder(
+        inflater: LayoutInflater,
+        parent: ViewGroup,
+        viewType: Int
+    ): TodayGankViewHolder {
         return TodayGankViewHolder(
             ItemTodayGankBinding.inflate(
                 LayoutInflater.from(parent.context), parent, false
@@ -29,7 +33,7 @@ class TodayGankCategoryAdapter :
 
     class TodayGankViewHolder(
         binding: ItemTodayGankBinding
-    ) : RecyclerView.ViewHolder(binding.root) {
+    ) : cc.bear3.baseadapter.AContentViewHolder(binding.root) {
 
         private val viewModel = TodayGankCategoryItemViewModel()
 

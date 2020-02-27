@@ -37,7 +37,7 @@ class TodayGankCategoryFragment private constructor() : BaseFragment() {
         val adapter = TodayGankCategoryAdapter()
         binding.gankList.adapter = adapter
 
-        adapter.dataRefresh(arguments!!.getParcelableArrayList(ARG_DATA_LIST))
+        adapter.dataRefresh(arguments!!.getParcelableArrayList(ARG_DATA_LIST), true)
 
         return binding.root
     }
