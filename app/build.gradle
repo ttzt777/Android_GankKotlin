@@ -19,7 +19,7 @@ android {
         enabled = true
     }
     defaultConfig {
-        applicationId "cc.bear3.gank"
+        applicationId "cc.bear3.osbear"
         minSdkVersion config.min
         targetSdkVersion config.target
         versionCode 1
@@ -77,5 +77,7 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxkotlin:2.4.0'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     implementation project(path: ':baseadapter')
+
+    implementation "com.airbnb.android:lottie:$lib.lottie"
 
 }

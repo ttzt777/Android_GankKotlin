@@ -6,7 +6,12 @@
 
     <fragment
         android:id="@+id/view_pager_fragment"
-        android:name="cc.bear3.gank.ui.ContainerFragment"
+        android:name="cc.bear3.osbear.ui.ContainerFragment"
         tools:layout="@layout/fragment_container"/>
+
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="cc.bear3.osbear.ui.login.LoginFragment"
+        tools:layout="@layout/fragment_login"/>
 
 </navigation>
