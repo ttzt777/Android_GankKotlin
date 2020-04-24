@@ -32,8 +32,11 @@ abstract class ABaseAdapter<T, VH : AContentViewHolder> :
     // 状态
     var status = Status.Null
         set(value) {
-            field = value
+            if (field == value) {
+                return
+            }
 
+            field = value
             notifyDataSetChanged()
         }
 

@@ -8,9 +8,13 @@
 
     <string name="app_tab_last">最新</string>
     <string name="app_tab_project">软件</string>
-    <string name="app_tab_post">帖子</string>
+<!--    <string name="app_tab_post">帖子</string>-->
     <string name="app_tab_tweet">动弹</string>
     <string name="app_tab_profile">我的</string>
+
+    <string name="app_last_blog">博客</string>
+    <string name="app_last_news">资讯</string>
+    <string name="app_last_post">帖子</string>
 
     <string name="default_empty_hint">这里空空如也</string>
     <string name="default_nomore_hint">没有更多了</string>

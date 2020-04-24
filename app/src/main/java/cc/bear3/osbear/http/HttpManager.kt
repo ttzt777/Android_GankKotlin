@@ -33,6 +33,7 @@ object HttpManager {
         builder.connectTimeout(TIMEOUT, TimeUnit.SECONDS)
             .readTimeout(TIMEOUT, TimeUnit.SECONDS)
             .retryOnConnectionFailure(true)
+            .addInterceptor(HttpRequestInterceptor())
 //                    .dns(ApiDns())
 //                    .sslSocketFactory(sslParams.sSLSocketFactory, sslParams.trustManager)
 

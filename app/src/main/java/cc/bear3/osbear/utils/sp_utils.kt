@@ -18,7 +18,11 @@ sealed class SpHandler(spName: String) {
     }
 }
 
-object AccountSp : SpHandler(SP_NAME_ACCOUNT)
+object AccountSp : SpHandler(SP_NAME_ACCOUNT) {
+    const val SP_TOKEN = "token"
+    const val SP_EXPIRES = "expires"
+    const val SP_USER_INFO = "user_info"
+}
 
 fun SpHandler.putString(key: String, value: String) {
     getEditor().putString(key, value).apply()

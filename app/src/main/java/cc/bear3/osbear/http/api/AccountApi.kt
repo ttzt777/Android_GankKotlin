@@ -4,6 +4,7 @@ import cc.bear3.osbear.app.APP_ID
 import cc.bear3.osbear.app.APP_REDIRECT_URL
 import cc.bear3.osbear.app.APP_SECRET
 import cc.bear3.osbear.data.TokenData
+import cc.bear3.osbear.data.UserInfo
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -31,4 +32,14 @@ interface AccountApi {
         @Query("redirect_uri") redirectUri: String = APP_REDIRECT_URL,
         @Query("refresh_token") token: String
     ): Observable<TokenData>
+
+    @GET("my_information")
+    fun getMyInformation() : Observable<UserInfo>
+
+    @GET("user_information")
+    fun getUserInformation(
+        @Query("user") ownerId: Long,
+        @Query("friend") friendId: Long,
+        @Query("friend_name") friendName: String
+    ) : Observable<UserInfo>
 }
